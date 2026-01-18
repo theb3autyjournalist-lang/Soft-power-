@@ -8,125 +8,103 @@
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        :root { --gold: #D4AF37; --gold-dark: #aa8c2c; }
+        :root { --gold: #D4AF37; }
         body { font-family: 'Inter', sans-serif; background-color: #030303; color: #f5f5f5; scroll-behavior: smooth; }
         .serif { font-family: 'Bodoni Moda', serif; }
         .gold-text { color: var(--gold); background: linear-gradient(to bottom, #f9e29b, #D4AF37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .gold-btn { background: linear-gradient(135deg, #E6C86E 0%, #C5A028 100%); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-        .gold-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(197, 160, 40, 0.4); filter: brightness(1.1); }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
-        .hero-gradient { background: radial-gradient(circle at center, rgba(197, 160, 40, 0.08) 0%, transparent 70%); }
-        .reveal { opacity: 0; transform: translateY(30px); animation: revealIn 1s forwards; }
-        @keyframes revealIn { to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body class="antialiased selection:bg-[#C5A028] selection:text-black">
 
-    <!-- Cinematic Navigation (Corporate Branding) -->
+    <!-- Nav -->
     <nav class="fixed w-full z-50 px-6 py-6 flex justify-between items-center">
-        <div class="glass px-6 py-3 rounded-full flex gap-8 items-center border border-[#C5A028]/20">
-            <span class="serif text-xl tracking-[0.4em] gold-text font-bold uppercase">Uneven Lines.co</span>
+        <div class="glass px-6 py-3 rounded-full border border-[#C5A028]/20">
+            <span class="serif text-xl tracking-[0.4em] gold-text font-bold uppercase text-xs md:text-xl">Uneven Lines.co</span>
         </div>
-        <div class="flex glass px-6 py-3 rounded-full gap-4 text-[9px] uppercase tracking-widest font-bold">
-            <a href="#wholesale" class="text-[#C5A028]">Wholesale</a>
-        </div>
+        <a href="#wholesale" class="glass px-6 py-3 rounded-full text-[9px] uppercase tracking-widest font-bold text-[#C5A028]">Order Bulk</a>
     </nav>
 
-    <!-- Hero Section (The Product) -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-black/60 z-10"></div>
-            <img src="https://images.unsplash.com/photo-1519791883288-dc8bd696e667?q=80&w=2670&auto=format&fit=crop" class="w-full h-full object-cover" style="filter: contrast(1.2) brightness(0.4);" alt="Soft Power Journal Image">
+            <div class="absolute inset-0 bg-black/70 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1519791883288-dc8bd696e667?q=80&w=2670&auto=format&fit=crop" class="w-full h-full object-cover" style="filter: brightness(0.4);" alt="Soft Power Journal">
         </div>
-
-        <div class="relative z-20 text-center px-6 reveal">
-            <div class="mb-8 inline-block">
-                <span class="text-[10px] tracking-[0.8em] uppercase text-gray-400 border-b border-[#C5A028]/50 pb-2 font-bold italic">A C. RAY3 Original</span>
-            </div>
-            <h1 class="text-6xl md:text-9xl serif italic font-light mb-8 leading-none tracking-tighter text-white">
-                The Soft <span class="gold-text font-bold">Power</span><br/>
-                <span class="text-4xl md:text-6xl text-gray-400 not-italic tracking-[0.2em] font-light">JOURNAL</span>
-            </h1>
-            <p class="text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto mb-16 font-light italic leading-relaxed">
-                "Spiritual discernment for the sovereign soul."
-            </p>
-            
+        <div class="relative z-20 text-center px-6">
+            <h1 class="text-6xl md:text-9xl serif italic font-light mb-8 text-white">The Soft <span class="gold-text font-bold">Power</span></h1>
+            <p class="text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto mb-16 font-light italic">"Spiritual discernment for the sovereign soul."</p>
             <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
-                <a href="https://www.amazon.com/Soft-Power-Journal-C-Ray3/dp/B0FMQZHBHR" target="_blank" class="w-64 bg-white text-black font-bold px-10 py-5 uppercase tracking-[0.2em] text-[10px] hover:bg-[#C5A028] transition-all">Purchase Print (Amazon)</a>
-                <a href="https://theb3autyjournalist.gumroad.com/l/wsdcsn" target="_blank" class="w-64 glass text-white font-bold px-10 py-5 uppercase tracking-[0.2em] text-[10px] hover:border-[#C5A028] transition-all">Digital Edition</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Branding Section (Uneven Lines.co) -->
-    <section class="py-32 bg-black flex justify-center border-t border-white/5">
-        <div class="max-w-5xl px-6 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-            <div class="relative">
-                <div class="absolute -inset-4 bg-[#C5A028]/10 rounded blur-3xl"></div>
-                <img src="https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?q=80&w=2573&auto=format&fit=crop" class="relative z-10 rounded-sm grayscale hover:grayscale-0 transition-all duration-1000 border border-white/10" alt="Uneven Lines Wisdom">
-            </div>
-            <div>
-                <h2 class="serif text-5xl mb-8 leading-tight text-white italic">Uneven Lines.co<br/><span class="gold-text font-bold not-italic text-3xl tracking-widest">PUBLISHING HOUSE</span></h2>
-                <p class="text-gray-400 font-light text-lg leading-relaxed mb-8">
-                    Uneven Lines.co serves as the ultimate container for legacy-building, discernment, and the reclamation of self. Every release is a curated invitation to sovereignty.
-                </p>
-                <div class="flex gap-4 items-center">
-                    <div class="h-px w-12 bg-[#C5A028]"></div>
-                    <span class="text-[10px] uppercase tracking-[0.4em] font-bold text-[#C5A028]">Generation Three Fulfillment</span>
-                </div>
+                <a href="https://www.amazon.com/Soft-Power-Journal-C-Ray3/dp/B0FMQZHBHR" target="_blank" class="w-64 bg-white text-black font-bold px-10 py-5 uppercase tracking-widest text-[10px]">Amazon (Retail)</a>
+                <a href="#wholesale" class="w-64 glass text-white font-bold px-10 py-5 uppercase tracking-widest text-[10px]">Wholesale Portal</a>
             </div>
         </div>
     </section>
 
     <!-- Wholesale Portal -->
-    <section id="wholesale" class="py-40 relative bg-[#050505]">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="glass p-12 md:p-24 rounded-3xl relative overflow-hidden shadow-2xl border border-[#C5A028]/20">
-                <div class="relative z-10 flex flex-col lg:flex-row gap-16 items-center">
-                    <div class="lg:w-1/2 text-center lg:text-left">
-                        <span class="text-[#C5A028] text-[10px] uppercase tracking-[0.6em] font-black mb-6 block">Bulk Distribution</span>
-                        <h2 class="serif text-6xl text-white mb-8 italic">Wholesale <br><span class="font-bold not-italic">Fulfillment</span></h2>
-                        <p class="text-gray-400 text-lg font-light leading-relaxed mb-10">
-                            Professional portal for clinics, wellness centers, and practices acquiring bulk copies of <span class="text-white italic">The Soft Power Journal</span>.
-                        </p>
-                        <div class="flex justify-center lg:justify-start gap-6 opacity-30 grayscale">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="h-5" alt="PayPal">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" class="h-5" alt="Mastercard">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" class="h-5" alt="Visa">
+    <section id="wholesale" class="py-40 bg-[#050505] flex justify-center">
+        <div class="max-w-4xl w-full px-6">
+            <div class="glass p-12 rounded-3xl border border-[#C5A028]/30 shadow-2xl">
+                <div class="text-center lg:text-left mb-12">
+                    <span class="text-[#C5A028] text-[10px] uppercase tracking-[0.6em] font-black mb-4 block">Institutional Fulfillment</span>
+                    <h2 class="serif text-5xl text-white mb-4 italic">Wholesale Ordering</h2>
+                    <p class="text-gray-400 font-light">Select your required volume below for <span class="text-white italic">The Soft Power Journal</span>.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Product Info -->
+                    <div class="space-y-6">
+                        <div class="flex justify-between border-b border-white/10 pb-4">
+                            <span class="text-gray-400 text-sm">Unit Price (Wholesale)</span>
+                            <span class="text-white font-bold">$14.99</span>
+                        </div>
+                        <div class="flex justify-between border-b border-white/10 pb-4">
+                            <span class="text-gray-400 text-sm">Availability</span>
+                            <span class="text-green-500 text-xs uppercase tracking-widest font-bold">In Stock</span>
+                        </div>
+                        <div class="pt-4">
+                            <label class="text-[10px] uppercase tracking-widest text-gray-500 block mb-4">Target Quantity</label>
+                            <div class="flex gap-4">
+                                <button onclick="updateQty(10)" class="px-4 py-2 border border-white/20 rounded hover:border-[#C5A028] text-xs">10</button>
+                                <button onclick="updateQty(25)" class="px-4 py-2 border border-white/20 rounded hover:border-[#C5A028] text-xs">25</button>
+                                <button onclick="updateQty(50)" class="px-4 py-2 border border-white/20 rounded hover:border-[#C5A028] text-xs">50</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="lg:w-1/2 w-full">
-                        <div class="bg-black border border-white/10 p-10 rounded-2xl text-center shadow-2xl">
-                            <i data-lucide="shield-check" class="w-12 h-12 text-[#C5A028] mx-auto mb-6"></i>
-                            <h3 class="serif text-white text-3xl mb-10 italic underline decoration-[#C5A028]/20">Secure Gateway</h3>
-                            
-                            <!-- PAYPAL CHECKOUT LINK -->
-                            <a href="https://py.pl/18iGlM" target="_blank" class="gold-btn block w-full text-black font-black uppercase tracking-[0.25em] py-6 text-[10px] rounded shadow-xl">
-                                Access Payment Portal
-                            </a>
-                            <p class="mt-8 text-[9px] text-gray-600 uppercase tracking-widest font-bold">Uneven Lines.co Secure Settlement</p>
+                    <!-- Checkout Logic -->
+                    <div class="bg-black border border-white/10 p-8 rounded-2xl text-center">
+                        <h3 class="serif text-white text-2xl mb-6 italic">Order Summary</h3>
+                        <div class="mb-10">
+                            <span id="qty-display" class="text-4xl font-bold text-white">25</span>
+                            <span class="text-gray-500 text-xs uppercase tracking-widest ml-2">Copies</span>
+                            <div class="text-[#C5A028] text-2xl font-bold mt-2">$<span id="total-display">374.75</span></div>
                         </div>
+                        
+                        <a href="https://py.pl/18iGlM" target="_blank" class="gold-btn block w-full text-black font-black uppercase tracking-[0.25em] py-6 text-[10px] rounded">
+                            Finalize via PayPal
+                        </a>
+                        <p class="mt-6 text-[9px] text-gray-600 uppercase tracking-widest leading-relaxed">
+                            Note: PayPal will open for a $14.99 base transaction. Adjust final quantity inside the PayPal portal to match your selection.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-32 bg-black text-center border-t border-white/5">
-        <h2 class="serif text-4xl italic gold-text font-bold mb-4">C. RAY3</h2>
-        <p class="text-[11px] text-white tracking-[0.5em] mb-12 uppercase">Founder of Uneven Lines.co</p>
-        <div class="flex justify-center gap-10 mb-16 text-[10px] uppercase tracking-[0.3em] font-bold text-gray-500">
-            <a href="https://theb3autyjournalist.gumroad.com/l/wsdcsn" target="_blank" class="hover:text-[#C5A028]">Digital Edition</a>
-            <a href="https://www.amazon.com/Soft-Power-Journal-C-Ray3/dp/B0FMQZHBHR" target="_blank" class="hover:text-[#C5A028]">Amazon Retail</a>
-        </div>
-        <div class="w-16 h-px bg-[#C5A028]/50 mx-auto mb-8"></div>
-        <p class="text-[9px] text-gray-800 uppercase tracking-[0.6em] font-black">LEGACY ACQUISITION • ALL RIGHTS RESERVED</p>
+    <footer class="py-20 bg-black text-center border-t border-white/5">
+        <h2 class="serif text-3xl italic gold-text font-bold mb-4 uppercase">Uneven Lines.co</h2>
+        <p class="text-[9px] text-gray-700 uppercase tracking-[0.6em] font-black">Legacy Distribution • C. RAY3</p>
     </footer>
 
     <script>
         lucide.createIcons();
+        function updateQty(val) {
+            document.getElementById('qty-display').innerText = val;
+            document.getElementById('total-display').innerText = (val * 14.99).toFixed(2);
+        }
     </script>
 </body>
 </html>
