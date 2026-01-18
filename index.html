@@ -3,179 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Soft Power Journal | C. Ray3</title>
+    <title>C. RAY3 | Uneven Lines.co</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #050505;
-            color: #e5e5e5;
-            scroll-behavior: smooth;
-        }
-        h1, h2, h3, .serif {
-            font-family: 'Playfair Display', serif;
-        }
-        /* Soft Power Gold Gradient */
-        .gold-text {
-            background: linear-gradient(to right, #D4AF37, #F1DDA4, #D4AF37);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        .gold-bg {
-            background: linear-gradient(to right, #C5A028, #E6C86E);
-        }
-        .fade-in {
-            animation: fadeIn 1.5s ease-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        :root { --gold: #D4AF37; --gold-dark: #aa8c2c; }
+        body { font-family: 'Inter', sans-serif; background-color: #030303; color: #f5f5f5; scroll-behavior: smooth; }
+        .serif { font-family: 'Bodoni Moda', serif; }
+        .gold-text { color: var(--gold); background: linear-gradient(to bottom, #f9e29b, #D4AF37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gold-btn { background: linear-gradient(135deg, #E6C86E 0%, #C5A028 100%); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .gold-btn:hover { transform: translateY(-3px); shadow: 0 10px 20px rgba(197, 160, 40, 0.4); filter: brightness(1.1); }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .hero-gradient { background: radial-gradient(circle at center, rgba(197, 160, 40, 0.08) 0%, transparent 70%); }
+        .reveal { opacity: 0; transform: translateY(30px); animation: revealIn 1s forwards; }
+        @keyframes revealIn { to { opacity: 1; transform: translateY(0); } }
+        .floating { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
     </style>
 </head>
 <body class="antialiased selection:bg-[#C5A028] selection:text-black">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center gap-3">
-                    <span class="serif text-xl md:text-2xl tracking-widest text-white border-b border-[#C5A028] pb-1">C. Ray3</span>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#about" class="hover:text-[#C5A028] transition-colors px-3 py-2 text-xs uppercase tracking-[0.2em]">The Journal</a>
-                        <a href="#alchemy" class="hover:text-[#C5A028] transition-colors px-3 py-2 text-xs uppercase tracking-[0.2em]">The Alchemy</a>
-                        <a href="#bulk" class="bg-white text-black hover:bg-[#C5A028] transition-all px-6 py-2 text-xs uppercase tracking-[0.2em] font-bold">Wholesale / Bulk</a>
-                    </div>
-                </div>
-            </div>
+    <!-- Cinematic Navigation -->
+    <nav class="fixed w-full z-50 px-6 py-6 flex justify-between items-center transition-all duration-500">
+        <div class="glass px-6 py-3 rounded-full flex gap-8 items-center">
+            <span class="serif text-xl tracking-[0.4em] gold-text font-bold">UNEVEN LINES.CO</span>
+        </div>
+        <div class="hidden md:flex glass px-8 py-3 rounded-full gap-8 text-[10px] uppercase tracking-widest font-bold">
+            <a href="#about" class="hover:text-[#C5A028] transition-colors">The Vision</a>
+            <a href="#wholesale" class="hover:text-[#C5A028] transition-colors">Wholesale</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background -->
+    <!-- Ultra-Luxury Hero -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
         <div class="absolute inset-0 z-0">
-             <div class="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black z-10"></div>
-             <!-- Minimalist background image placeholder -->
-             <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2690&auto=format&fit=crop" class="w-full h-full object-cover opacity-20 grayscale" alt="Texture">
+            <div class="absolute inset-0 bg-black/60 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1519791883288-dc8bd696e667?q=80&w=2670&auto=format&fit=crop" class="w-full h-full object-cover scale-110" style="filter: contrast(1.2) brightness(0.4);" alt="Background">
         </div>
-        
-        <div class="relative z-20 text-center max-w-5xl px-4 fade-in mt-10">
-            <p class="text-[#C5A028] tracking-[0.4em] uppercase text-xs md:text-sm mb-8">Discerning. Intentional. Sovereign.</p>
-            <h1 class="text-5xl md:text-7xl lg:text-9xl mb-6 leading-none">
-                The Soft Power<br/>
-                <span class="italic text-gray-500">Journal</span>
+
+        <div class="relative z-20 text-center px-6 reveal">
+            <div class="mb-8 inline-block">
+                <span class="text-[10px] tracking-[0.8em] uppercase text-gray-400 border-b border-[#C5A028]/50 pb-2 font-bold">C. RAY3 Presents</span>
+            </div>
+            <h1 class="text-7xl md:text-9xl serif italic font-light mb-8 leading-none tracking-tighter">
+                Soft <span class="gold-text">Power</span>
             </h1>
-            <p class="text-lg md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed serif italic">
-                "Don't Use Me Like That"
+            <p class="text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto mb-16 font-light italic leading-relaxed">
+                "Spiritual discernment for the sovereign soul."
             </p>
+            
             <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
-                <!-- Link to Amazon -->
-                <a href="https://www.amazon.com/Soft-Power-Journal-C-Ray3/dp/B0FMQZHBHR" target="_blank" class="gold-bg text-black font-bold px-10 py-4 min-w-[200px] uppercase tracking-widest hover:scale-105 transition-transform">
-                    Buy on Amazon
-                </a>
-                <a href="#bulk" class="border border-white/20 text-white px-10 py-4 min-w-[200px] uppercase tracking-widest hover:bg-white/5 hover:border-[#C5A028] transition-all">
-                    Bulk Orders
-                </a>
+                <a href="https://www.amazon.com/Soft-Power-Journal-C-Ray3/dp/B0FMQZHBHR" target="_blank" class="w-64 bg-white text-black font-bold px-10 py-5 uppercase tracking-[0.2em] text-[10px] hover:bg-[#C5A028] transition-all">Buy Retail</a>
+                <a href="#wholesale" class="w-64 glass text-white font-bold px-10 py-5 uppercase tracking-[0.2em] text-[10px] hover:border-[#C5A028] transition-all">Wholesale Portal</a>
             </div>
         </div>
-    </section>
 
-    <!-- The Quote -->
-    <section class="py-32 bg-[#0a0a0a] px-4 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="serif text-3xl md:text-5xl leading-tight text-white mb-10">
-                "This is not a burn book.<br/>
-                It is a <span class="text-[#C5A028] italic">birth book</span>."
-            </h2>
-            <p class="text-gray-500 tracking-widest uppercase text-sm">— C. Ray3</p>
+        <!-- Decorative element -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-30">
+            <i data-lucide="chevron-down" class="w-6 h-6"></i>
         </div>
     </section>
 
-    <!-- The 4 Stages -->
-    <section id="alchemy" class="py-24 bg-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10">
-                <div class="bg-[#050505] p-12 hover:bg-[#0a0a0a] transition-colors group">
-                    <span class="serif text-[#C5A028] text-5xl opacity-50 mb-6 block">I.</span>
-                    <h3 class="text-2xl text-white mb-4 uppercase tracking-widest">The Patterns I Ignored</h3>
-                    <p class="text-gray-400 font-light mb-4">"How many times did I say yes when my body said no?"</p>
-                    <p class="text-sm text-gray-600 italic">Reflect on the red flags you once normalized.</p>
-                </div>
-                <div class="bg-[#050505] p-12 hover:bg-[#0a0a0a] transition-colors group">
-                    <span class="serif text-[#C5A028] text-5xl opacity-50 mb-6 block">II.</span>
-                    <h3 class="text-2xl text-white mb-4 uppercase tracking-widest">The Rage I Repressed</h3>
-                    <p class="text-gray-400 font-light mb-4">"If I could scream without being punished, what would I say?"</p>
-                    <p class="text-sm text-gray-600 italic">Sacred rage is not chaos, it is clarity.</p>
-                </div>
-                <div class="bg-[#050505] p-12 hover:bg-[#0a0a0a] transition-colors group">
-                    <span class="serif text-[#C5A028] text-5xl opacity-50 mb-6 block">III.</span>
-                    <h3 class="text-2xl text-white mb-4 uppercase tracking-widest">The Boundaries I Bless</h3>
-                    <p class="text-gray-400 font-light mb-4">"This is what access to me requires now."</p>
-                    <p class="text-sm text-gray-600 italic">Turn your pain into new policies.</p>
-                </div>
-                <div class="bg-[#050505] p-12 hover:bg-[#0a0a0a] transition-colors group">
-                    <span class="serif text-[#C5A028] text-5xl opacity-50 mb-6 block">IV.</span>
-                    <h3 class="text-2xl text-white mb-4 uppercase tracking-widest">Rituals That Keep Me Clean</h3>
-                    <p class="text-gray-400 font-light mb-4">"Write a goodbye letter to the version of you that accepted crumbs."</p>
-                    <p class="text-sm text-gray-600 italic">Soul exit ceremonies.</p>
+    <!-- Content Feature -->
+    <section id="about" class="py-32 bg-black flex justify-center">
+        <div class="max-w-5xl px-6 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div class="relative group">
+                <div class="absolute -inset-4 bg-[#C5A028]/20 rounded blur-2xl group-hover:bg-[#C5A028]/30 transition-all"></div>
+                <img src="https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?q=80&w=2573&auto=format&fit=crop" class="relative z-10 rounded shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000" alt="Journaling">
+            </div>
+            <div>
+                <h2 class="serif text-5xl mb-8 leading-tight italic">Boundary <br><span class="gold-text font-bold not-italic">Alchemy</span></h2>
+                <p class="text-gray-400 font-light text-lg leading-relaxed mb-8">
+                    Uneven Lines.co isn't just about ink on paper. It is a container for legacy, discernment, and the reclamation of self.
+                </p>
+                <div class="flex gap-4 items-center">
+                    <div class="h-px w-12 bg-[#C5A028]"></div>
+                    <span class="text-[10px] uppercase tracking-[0.4em] font-bold text-[#C5A028]">Generational Wisdom</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Bulk Section -->
-    <section id="bulk" class="py-24 bg-[#080808] border-t border-white/5">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <div>
-                    <h2 class="serif text-4xl mb-6 text-white">Soft Power for <br/><span class="text-[#C5A028] italic">Organizations</span></h2>
-                    <p class="text-gray-400 mb-8 leading-relaxed">
-                        The Soft Power Journal is available for bulk purchase. Perfect for Corporate Women's Groups, Retreats, and Recovery Circles.
-                    </p>
-                    <div class="space-y-4 text-sm text-gray-300">
-                        <div class="flex items-center"><span class="w-2 h-2 bg-[#C5A028] mr-3 rounded-full"></span> 25+ Copies: Boutique Discount</div>
-                        <div class="flex items-center"><span class="w-2 h-2 bg-[#C5A028] mr-3 rounded-full"></span> 100+ Copies: Organization Tier</div>
-                        <div class="flex items-center"><span class="w-2 h-2 bg-[#C5A028] mr-3 rounded-full"></span> 500+ Copies: Co-Branding Available</div>
+    <!-- The Wholesale Experience -->
+    <section id="wholesale" class="py-40 relative">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#C5A028]/30 to-transparent"></div>
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="glass p-12 md:p-24 rounded-3xl relative overflow-hidden">
+                <!-- Background texture -->
+                <div class="absolute inset-0 hero-gradient opacity-30 pointer-events-none"></div>
+                
+                <div class="relative z-10 flex flex-col lg:flex-row gap-16 items-center">
+                    <div class="lg:w-1/2 text-center lg:text-left">
+                        <span class="text-[#C5A028] text-[10px] uppercase tracking-[0.6em] font-black mb-6 block">Institutional Access</span>
+                        <h2 class="serif text-5xl md:text-6xl text-white mb-8 italic">Volume <br><span class="font-bold not-italic">Fulfillment</span></h2>
+                        <p class="text-gray-400 text-lg font-light leading-relaxed mb-10">
+                            Partner with Uneven Lines.co for clinical distribution, therapy retreat cohorts, and institutional wellness programs.
+                        </p>
+                        <div class="flex flex-wrap justify-center lg:justify-start gap-8 opacity-40 grayscale">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" class="h-6" alt="PayPal">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" class="h-6" alt="Visa">
+                        </div>
                     </div>
-                </div>
-                <div class="bg-[#111] p-8 border border-white/10">
-                    <h3 class="text-xl serif text-white mb-6">Inquire About Bulk Orders</h3>
-                    <div class="space-y-4">
-                        <input type="text" id="orgName" class="w-full bg-black border border-white/20 p-3 text-white focus:border-[#C5A028] outline-none" placeholder="Organization Name">
-                        <select id="quantity" class="w-full bg-black border border-white/20 p-3 text-white focus:border-[#C5A028] outline-none">
-                            <option value="25-50">25 - 50</option>
-                            <option value="50-100">50 - 100</option>
-                            <option value="100+">100+</option>
-                        </select>
-                        <button onclick="sendEmail()" class="w-full gold-bg text-black font-bold uppercase tracking-widest py-4 mt-4 hover:opacity-90">
-                            Draft Email Inquiry
-                        </button>
+
+                    <div class="lg:w-1/2 w-full">
+                        <div class="bg-black/80 border border-white/10 p-10 rounded-2xl text-center shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                            <i data-lucide="shield-check" class="w-12 h-12 text-[#C5A028] mx-auto mb-6 opacity-80"></i>
+                            <h3 class="serif text-white text-3xl mb-2">Secure Settlement</h3>
+                            <p class="text-gray-500 text-[10px] uppercase tracking-widest mb-10">Uneven Lines.co Gateway</p>
+                            
+                            <!-- YOUR OFFICIAL PAYPAL LINK -->
+                            <a href="https://py.pl/18iGlM" target="_blank" class="gold-btn block w-full text-black font-black uppercase tracking-[0.25em] py-6 text-[10px] rounded shadow-xl">
+                                Enter Payment Portal
+                            </a>
+                            <p class="mt-6 text-[9px] text-gray-600 uppercase tracking-widest italic">Encrypted Secure Transaction</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-black py-12 border-t border-white/10 text-center">
-        <p class="serif text-white text-lg">C. Ray3</p>
-        <p class="text-xs text-gray-600 mt-2 uppercase tracking-widest">© 2024 The Soft Power Journal</p>
+    <!-- High-End Footer -->
+    <footer class="py-32 bg-black border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="serif text-4xl italic gold-text font-bold mb-10">C. RAY3</h2>
+            <div class="flex justify-center gap-12 mb-16 text-[10px] uppercase tracking-[0.3em] font-bold text-gray-500">
+                <a href="https://theb3autyjournalist.gumroad.com/l/wsdcsn" target="_blank" class="hover:text-white transition-colors">Digital Store</a>
+                <a href="https://www.amazon.com/Soft-Power-Journal-C-Ray3/dp/B0FMQZHBHR" target="_blank" class="hover:text-white transition-colors">Amazon Store</a>
+            </div>
+            <div class="w-12 h-px bg-[#C5A028] mx-auto mb-8"></div>
+            <p class="text-[9px] text-gray-700 uppercase tracking-[0.6em] font-black">UNEVEN LINES.CO — ALL RIGHTS RESERVED</p>
+            <p class="text-[8px] text-gray-800 mt-4 uppercase tracking-widest italic">Built for the Third Generation</p>
+        </div>
     </footer>
 
     <script>
-        function sendEmail() {
-            const org = document.getElementById('orgName').value || 'My Organization';
-            const qty = document.getElementById('quantity').value;
-            const subject = encodeURIComponent("Bulk Order Inquiry: The Soft Power Journal");
-            const body = encodeURIComponent(`Hi C. Ray3,\n\nI am interested in a bulk order of The Soft Power Journal.\n\nOrganization: ${org}\nEstimated Quantity: ${qty}\n\nPlease let me know pricing and availability.\n\nBest,\n[Your Name]`);
-            window.location.href = `mailto:?subject=${subject}&body=${body}`;
-        }
         lucide.createIcons();
+        // Fade in on scroll effect
+        window.addEventListener('scroll', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const revealTop = el.getBoundingClientRect().top;
+                if (revealTop < windowHeight - 150) {
+                    el.style.opacity = "1";
+                    el.style.transform = "translateY(0)";
+                }
+            });
+        });
     </script>
 </body>
 </html>
