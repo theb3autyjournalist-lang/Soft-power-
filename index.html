@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Soft Power Journal | C. Ray3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: #e5e5e5;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Soft Power Gold Gradient */
+        .gold-text {
+            background: linear-gradient(to right, #D4AF37, #F1DDA4, #D4AF37);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .gold-bg {
+            background: linear-gradient(to right, #C5A028, #E6C86E);
+        }
+        .fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#C5A028] selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <span class="serif text-xl md:text-2xl tracking-widest text-white border-b border-[#C5A028] pb-1">C. Ray3</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="hover:text-[#C5A028] transition-colors px-3 py-2 text-xs uppercase tracking-[0.2em]">The Journal</a>
+                        <a href="#alchemy" class="hover:text-[#C5A028] transition-colors px-3 py-2 text-xs uppercase tracking-[0.2em]">The Alchemy</a>
+                        <a href="#bulk" class="bg-white text-black hover:bg-[#C5A028] transition-all px-6 py-2 text-xs uppercase tracking-[0.2em] font-bold">Wholesale / Bulk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background -->
+        <div class="absolute inset-0 z-0">
+             <div class="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black z-10"></div>
+             <!-- Minimalist background image placeholder -->
+             <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=2690&auto=format&fit=crop" class="w-full h-full object-cover opacity-20 grayscale" alt="Texture">
+        </div>
+        
+        <div class="relative z-20 text-center max-w-5xl px-4 fade-in mt-10">
+            <p class="text-[#C5A028] tracking-[0.4em] uppercase text-xs md:text-sm mb-8">Discerning. Intentional. Sovereign.</p>
+            <h1 class="text-5xl md:text-7xl lg:text-9xl mb-6 leading-none">
+                The Soft Power<br/>
+                <span class="italic text-gray-500">Journal</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed serif italic">
+                "Don't Use Me Like That"
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                <!-- Link to Amazon -->
+                <a href="https://www.amazon.com/Soft-Power-Journal-C-Ray3/dp/B0FMQZHBHR" target="_blank" class="gold-bg text-black font-bold px-10 py-4 min-w-[200px] uppercase tracking-widest hover:scale-105 transition-transform">
+                    Buy on Amazon
+                </a>
+                <a href="#bulk" class="border border-white/20 text-white px-10 py-4 min-w-[200px] uppercase tracking-widest hover:bg-white/5 hover:border-[#C5A028] transition-all">
+                    Bulk Orders
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Quote -->
+    <section class="py-32 bg-[#0a0a0a] px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="serif text-3xl md:text-5xl leading-tight text-white mb-10">
+                "This is not a burn book.<br/>
+                It is a <span class="text-[#C5A028] italic">birth book</span>."
+            </h2>
+            <p class="text-gray-500 tracking-widest uppercase text-sm">— C. Ray3</p>
+        </div>
+    </section>
+
+    <!-- The 4 Stages -->
+    <section id="alchemy" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10">
+                <div class="bg-[#050505] p-12 hover:bg-[#0a0a0a] transition-colors group">
+                    <span class="serif text-[#C5A028] text-5xl opacity-50 mb-6 block">I.</span>
+                    <h3 class="text-2xl text-white mb-4 uppercase tracking-widest">The Patterns I Ignored</h3>
+                    <p class="text-gray-400 font-light mb-4">"How many times did I say yes when my body said no?"</p>
+                    <p class="text-sm text-gray-600 italic">Reflect on the red flags you once normalized.</p>
+                </div>
+                <div class="bg-[#050505] p-12 hover:bg-[#0a0a0a] transition-colors group">
+                    <span class="serif text-[#C5A028] text-5xl opacity-50 mb-6 block">II.</span>
+                    <h3 class="text-2xl text-white mb-4 uppercase tracking-widest">The Rage I Repressed</h3>
+                    <p class="text-gray-400 font-light mb-4">"If I could scream without being punished, what would I say?"</p>
+                    <p class="text-sm text-gray-600 italic">Sacred rage is not chaos, it is clarity.</p>
+                </div>
+                <div class="bg-[#050505] p-12 hover:bg-[#0a0a0a] transition-colors group">
+                    <span class="serif text-[#C5A028] text-5xl opacity-50 mb-6 block">III.</span>
+                    <h3 class="text-2xl text-white mb-4 uppercase tracking-widest">The Boundaries I Bless</h3>
+                    <p class="text-gray-400 font-light mb-4">"This is what access to me requires now."</p>
+                    <p class="text-sm text-gray-600 italic">Turn your pain into new policies.</p>
+                </div>
+                <div class="bg-[#050505] p-12 hover:bg-[#0a0a0a] transition-colors group">
+                    <span class="serif text-[#C5A028] text-5xl opacity-50 mb-6 block">IV.</span>
+                    <h3 class="text-2xl text-white mb-4 uppercase tracking-widest">Rituals That Keep Me Clean</h3>
+                    <p class="text-gray-400 font-light mb-4">"Write a goodbye letter to the version of you that accepted crumbs."</p>
+                    <p class="text-sm text-gray-600 italic">Soul exit ceremonies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bulk Section -->
+    <section id="bulk" class="py-24 bg-[#080808] border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="serif text-4xl mb-6 text-white">Soft Power for <br/><span class="text-[#C5A028] italic">Organizations</span></h2>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        The Soft Power Journal is available for bulk purchase. Perfect for Corporate Women's Groups, Retreats, and Recovery Circles.
+                    </p>
+                    <div class="space-y-4 text-sm text-gray-300">
+                        <div class="flex items-center"><span class="w-2 h-2 bg-[#C5A028] mr-3 rounded-full"></span> 25+ Copies: Boutique Discount</div>
+                        <div class="flex items-center"><span class="w-2 h-2 bg-[#C5A028] mr-3 rounded-full"></span> 100+ Copies: Organization Tier</div>
+                        <div class="flex items-center"><span class="w-2 h-2 bg-[#C5A028] mr-3 rounded-full"></span> 500+ Copies: Co-Branding Available</div>
+                    </div>
+                </div>
+                <div class="bg-[#111] p-8 border border-white/10">
+                    <h3 class="text-xl serif text-white mb-6">Inquire About Bulk Orders</h3>
+                    <div class="space-y-4">
+                        <input type="text" id="orgName" class="w-full bg-black border border-white/20 p-3 text-white focus:border-[#C5A028] outline-none" placeholder="Organization Name">
+                        <select id="quantity" class="w-full bg-black border border-white/20 p-3 text-white focus:border-[#C5A028] outline-none">
+                            <option value="25-50">25 - 50</option>
+                            <option value="50-100">50 - 100</option>
+                            <option value="100+">100+</option>
+                        </select>
+                        <button onclick="sendEmail()" class="w-full gold-bg text-black font-bold uppercase tracking-widest py-4 mt-4 hover:opacity-90">
+                            Draft Email Inquiry
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-12 border-t border-white/10 text-center">
+        <p class="serif text-white text-lg">C. Ray3</p>
+        <p class="text-xs text-gray-600 mt-2 uppercase tracking-widest">© 2024 The Soft Power Journal</p>
+    </footer>
+
+    <script>
+        function sendEmail() {
+            const org = document.getElementById('orgName').value || 'My Organization';
+            const qty = document.getElementById('quantity').value;
+            const subject = encodeURIComponent("Bulk Order Inquiry: The Soft Power Journal");
+            const body = encodeURIComponent(`Hi C. Ray3,\n\nI am interested in a bulk order of The Soft Power Journal.\n\nOrganization: ${org}\nEstimated Quantity: ${qty}\n\nPlease let me know pricing and availability.\n\nBest,\n[Your Name]`);
+            window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        }
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
+
