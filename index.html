@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uneven Lines.co | C. Ray3</title>
     
-    <!-- PART 1: PAYPAL SDK -->
+    <!-- PART 1: PAYPAL SDK (Essential for Hosted Buttons) -->
     <script src="https://www.paypal.com/sdk/js?client-id=BAABEZF02fsOyaCBCpOKx20XJPUyrQhxM4nV1390RuGSVOPcvgJvH1raRtVEO31LQ7CW6_SM11SvUVecLg&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -39,7 +39,7 @@
         </div>
 
         <div class="relative z-20 text-center px-6">
-            <span class="text-[10px] tracking-[1.5em] uppercase text-gray-500 font-bold mb-6 block italic">C. Ray3 Publishing House</span>
+            <span class="text-[10px] tracking-[1.5em] uppercase text-gray-500 font-bold mb-6 block italic leading-none">C. Ray3 Publishing House</span>
             <h1 class="text-7xl md:text-[11rem] serif italic font-light mb-0 text-white tracking-tighter leading-none">
                 Soft <span class="gold-text font-bold">Power</span>
             </h1>
@@ -47,7 +47,7 @@
             
             <div class="mt-20 flex flex-col md:flex-row gap-8 justify-center items-center">
                 <a href="https://www.amazon.com/Soft-Power-Journal-C-Ray3/dp/B0FMQZHBHR" target="_blank" class="w-72 border border-white/20 py-5 text-[10px] uppercase tracking-[0.4em] text-white hover:bg-white hover:text-black transition-all font-bold">Amazon Retail</a>
-                <a href="#acquisition" class="w-72 bg-white text-black py-5 text-[10px] uppercase tracking-[0.4em] font-black hover:bg-[#D4AF37] transition-all">Wholesale Ledger</a>
+                <a href="#acquisition" class="w-72 bg-white text-black py-5 text-[10px] uppercase tracking-[0.4em] font-black hover:bg-[#D4AF37] transition-all leading-none">Wholesale Ledger</a>
             </div>
         </div>
     </section>
@@ -77,20 +77,28 @@
                     </div>
                 </div>
 
-                <!-- PART 2: PAYPAL SMART BUTTON -->
-                <div class="bg-white p-6 rounded-2xl shadow-2xl">
+                <!-- PART 2: PAYPAL SMART BUTTON AREA -->
+                <div class="bg-white p-6 rounded-2xl shadow-2xl overflow-hidden">
                     <div id="paypal-container-QSNVLTAQ778W8"></div>
                     <script>
-                        function loadButtons() {
+                        // Execute rendering after DOM and SDK are ready
+                        function renderWholesaleButton() {
                             if (window.paypal && window.paypal.HostedButtons) {
                                 paypal.HostedButtons({
                                     hostedButtonId: "QSNVLTAQ778W8",
                                 }).render("#paypal-container-QSNVLTAQ778W8");
                             } else {
-                                setTimeout(loadButtons, 500);
+                                // Retry if SDK isn't ready yet
+                                setTimeout(renderWholesaleButton, 500);
                             }
                         }
-                        loadButtons();
+                        
+                        // Initial trigger
+                        if (document.readyState === "complete") {
+                            renderWholesaleButton();
+                        } else {
+                            window.addEventListener("load", renderWholesaleButton);
+                        }
                     </script>
                 </div>
 
