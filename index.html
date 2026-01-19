@@ -3,116 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uneven Lines.co | C. Ray3</title>
+    <title>Uneven Lines | C. Ray3</title>
     
     <!-- PAYPAL SDK -->
     <script src="https://www.paypal.com/sdk/js?client-id=BAABEZF02fsOyaCBCpOKx20XJPUyrQhxM4nV1390RuGSVOPcvgJvH1raRtVEO31LQ7CW6_SM11SvUVecLg&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Inter:wght@200;400;600&display=swap" rel="stylesheet">
+    
     <style>
         :root { --gold: #D4AF37; }
-        body { font-family: 'Inter', sans-serif; background-color: #000000; color: #f5f5f5; scroll-behavior: smooth; }
+        
+        body { 
+            background-color: #000000; 
+            color: #ffffff; 
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
         .serif { font-family: 'Bodoni Moda', serif; }
-        .gold-text { color: var(--gold); }
-        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gold { color: var(--gold) !important; }
+        
+        /* THE ACTIVE PROMPT ANIMATION */
+        .prompt-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform, opacity;
+        }
+        
+        .prompt-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* THE LEDGER: Dark Slate Fix (#111111) */
+        /* This color ensures both black and white text from PayPal are visible */
+        .ledger-portal {
+            background-color: #111111 !important;
+            border: 1px solid #222;
+            padding: 60px 40px;
+            border-radius: 2px;
+            max-width: 480px;
+            margin: 0 auto;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+        }
+
+        .ledger-portal h3 { color: #ffffff !important; }
+        .ledger-portal p { color: #ffffff !important; }
+        .ledger-portal .price { color: var(--gold) !important; font-weight: 700; }
+        .ledger-portal .muted-text { color: #888888 !important; }
+
+        section { position: relative; width: 100%; }
+        
+        /* Subtle indicator line */
+        .active-line {
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+            margin: 0 auto 40px;
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Global Navigation -->
-    <nav class="fixed w-full z-50 px-8 py-10 flex justify-between items-center bg-gradient-to-b from-black to-transparent">
-        <span class="serif text-xl tracking-[0.6em] gold-text font-bold uppercase">Uneven Lines.co</span>
-        <a href="#ledger" class="text-[10px] uppercase tracking-[0.4em] font-black text-white border-b border-[#D4AF37] pb-1">The Ledger</a>
+    <!-- Nav -->
+    <nav class="fixed w-full z-50 px-10 py-10 flex justify-between items-center bg-black/40 backdrop-blur-md">
+        <span class="serif text-xl tracking-[0.4em] uppercase font-bold gold italic">Uneven Lines</span>
+        <a href="#ledger" class="text-[10px] uppercase tracking-[0.4em] text-white/80 border-b border-[#D4AF37] pb-1 font-semibold">Ledger</a>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center">
-        <div class="absolute inset-0 bg-black">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black z-10"></div>
-            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2573&auto=format&fit=crop" class="w-full h-full object-cover opacity-20 grayscale" alt="Authority">
+    <!-- Hero -->
+    <section class="h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2573&auto=format&fit=crop" class="w-full h-full object-cover opacity-20 grayscale">
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
         </div>
-        <div class="relative z-20 text-center px-6">
-            <span class="text-[10px] tracking-[1.5em] uppercase text-gray-500 font-bold mb-6 block italic leading-none">C. Ray3</span>
-            <h1 class="text-7xl md:text-[11rem] serif italic font-light mb-0 text-white tracking-tighter leading-none">
-                Soft <span class="gold-text font-bold">Power</span>
+        <div class="relative z-10 text-center px-6">
+            <h1 class="text-6xl md:text-[9rem] serif italic text-white leading-none tracking-tighter">
+                Soft <span class="gold font-bold">Power</span>
             </h1>
-            <p class="text-xl md:text-3xl font-light tracking-[0.6em] text-gray-400 uppercase mt-2 italic font-bold">Boundary Alchemy</p>
+            <p class="text-lg md:text-xl tracking-[1.2em] text-gray-500 uppercase mt-6 italic font-light">C. Ray3</p>
         </div>
     </section>
 
-    <!-- The Laws -->
-    <section class="py-40 bg-black flex justify-center border-t border-white/5">
-        <div class="max-w-4xl w-full px-6">
-            <div class="grid gap-24">
-                <div class="text-center">
-                    <p class="text-[10px] uppercase tracking-[0.5em] text-gray-600 mb-6 font-bold italic">Law I</p>
-                    <h2 class="serif text-4xl md:text-5xl text-white italic leading-relaxed">
-                        "What is the cost of my <span class="gold-text">unspoken</span> 'No'?"
-                    </h2>
-                </div>
-                
-                <div class="text-center">
-                    <p class="text-[10px] uppercase tracking-[0.5em] text-gray-600 mb-6 font-bold italic">Law II</p>
-                    <h2 class="serif text-4xl md:text-5xl text-white italic leading-relaxed">
-                        "If my boundaries were a <span class="gold-text">sanctuary</span>, who have I allowed to trample the grounds?"
-                    </h2>
-                </div>
-            </div>
+    <!-- Animated Prompts -->
+    <section class="py-64 bg-black">
+        <div class="max-w-4xl mx-auto px-10 space-y-[60vh] text-center">
             
-            <div class="mt-32 text-center">
-                <a href="https://www.amazon.com/Soft-Power-Journal-C-Ray3/dp/B0FMQZHBHR" target="_blank" class="inline-block border border-white/20 px-16 py-6 text-[10px] uppercase tracking-[0.4em] text-white hover:bg-white hover:text-black transition-all font-bold italic">Acquire Single Unit ($14.00)</a>
+            <div class="prompt-reveal">
+                <div class="active-line"></div>
+                <h2 class="serif text-4xl md:text-6xl italic leading-relaxed text-white">
+                    In which rooms do I find myself <span class="gold font-bold">shrinking</span> to accommodate those who haven't earned my presence?
+                </h2>
             </div>
+
+            <div class="prompt-reveal">
+                <div class="active-line"></div>
+                <h2 class="serif text-4xl md:text-6xl italic leading-relaxed text-white">
+                    Is my 'Yes' a genuine gift, or is it a <span class="gold font-bold">negotiation</span> for safety?
+                </h2>
+            </div>
+
+            <div class="prompt-reveal">
+                <div class="active-line"></div>
+                <h2 class="serif text-4xl md:text-6xl italic leading-relaxed text-white">
+                    What legacy of <span class="gold font-bold">sovereignty</span> am I leaving for the woman I am becoming?
+                </h2>
+            </div>
+
         </div>
     </section>
 
     <!-- The Ledger -->
-    <section id="ledger" class="py-40 bg-[#030303] flex justify-center">
-        <div class="max-w-4xl w-full px-6 text-center">
-            <span class="text-[#D4AF37] text-[10px] uppercase tracking-[1em] font-black mb-12 block italic">Volume Acquisitions</span>
-            <h2 class="serif text-6xl text-white mb-8 italic leading-tight">The <span class="font-bold not-italic">Ledger</span></h2>
+    <section id="ledger" class="py-64 bg-zinc-950 border-t border-white/5">
+        <div class="max-w-2xl mx-auto px-6">
             
-            <div class="glass p-8 md:p-16 rounded-[2.5rem] border border-white/10 max-w-lg mx-auto bg-white/5 mt-20">
-                <div class="mb-12 border-b border-white/5 pb-8">
-                    <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-4 font-black">Settlement Portal</p>
-                    <p class="text-white text-xl serif italic leading-none">Boutique Ledger: 15 Units</p>
-                    <div class="mt-6 flex justify-center items-center gap-4">
-                        <span class="text-gray-600 text-sm line-through">$14.00</span>
-                        <span class="text-[#D4AF37] text-2xl font-bold italic">$10.00 / ea</span>
+            <div class="ledger-portal text-center">
+                <h3 class="serif text-5xl mb-4 italic">The Ledger</h3>
+                <p class="text-[10px] uppercase tracking-[0.5em] mb-12 font-bold gold opacity-60">Wholesale Settlement</p>
+                
+                <div class="space-y-6">
+                    <p class="text-lg tracking-widest uppercase font-bold">The Soft Power Journal</p>
+                    <p class="price text-4xl tracking-tighter">$10.00 <span class="text-xs uppercase tracking-widest text-gray-500 font-normal ml-2">USD / unit</span></p>
+                    
+                    <div class="py-8">
+                        <p class="muted-text text-[11px] leading-relaxed uppercase tracking-[0.2em]">
+                            Bulk fulfillment for institutions & wellness centers. <br>
+                            <span class="text-white font-bold border-b border-gold/40 pb-1">Minimum suggested: 10 units.</span>
+                        </p>
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl shadow-2xl min-h-[150px] flex items-center justify-center">
-                    <div id="paypal-container-QSNVLTAQ778W8" class="w-full"></div>
-                </div>
-                <p class="text-[9px] text-gray-600 uppercase tracking-widest mt-8 italic">Total Settlement: $150.00 USD</p>
+                <!-- PayPal Button Area -->
+                <div id="paypal-container-QSNVLTAQ778W8" class="mt-8"></div>
+                
+                <p class="text-[9px] mt-12 uppercase tracking-[0.4em] text-gray-600 italic">Secure Payment Processing</p>
             </div>
 
-            <div class="mt-20">
-                <p class="text-gray-600 text-[10px] uppercase tracking-widest mb-4 italic">Retreat Bundles (50+) or Institutional Inquiry</p>
-                <a href="mailto:theb3autyjournalist@gmail.com" class="text-[12px] uppercase tracking-[0.5em] text-[#D4AF37] hover:text-white transition-colors font-bold underline">Formal Intake Inquiry</a>
+            <div class="mt-32 text-center">
+                <a href="https://www.amazon.com/Soft-Power-Journal-C-Ray3/dp/B0FMQZHBHR" target="_blank" class="text-gray-600 hover:text-white transition-all text-[11px] uppercase tracking-[0.6em] italic border-b border-gray-900 pb-2">Individual Retail Portal ($14.00)</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-40 text-center border-t border-white/5 bg-black">
-        <h2 class="serif text-xl tracking-[0.8em] gold-text font-bold mb-8 uppercase italic leading-none">Uneven Lines.co</h2>
-        <div class="flex justify-center gap-12 mb-12 opacity-50">
-            <a href="https://www.facebook.com/TheB3autyJournalist" target="_blank" class="text-[9px] uppercase tracking-[0.4em] hover:opacity-100 transition-opacity">FB</a>
-            <a href="https://www.instagram.com/theb3autyjournalist" target="_blank" class="text-[9px] uppercase tracking-[0.4em] hover:opacity-100 transition-opacity">IG</a>
-        </div>
-        <p class="text-[12px] text-gray-400 tracking-[0.4em] uppercase font-light">C. Ray3</p>
+    <footer class="py-40 text-center border-t border-white/5 opacity-20">
+        <p class="serif gold text-xl tracking-[0.6em] uppercase italic">Uneven Lines</p>
     </footer>
 
     <script>
+        // High-precision Observer
+        const observerOptions = {
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.prompt-reveal').forEach(el => observer.observe(el));
+
+        // PayPal
         function initPayPal() {
             if (window.paypal && window.paypal.HostedButtons) {
-                const container = document.querySelector("#paypal-container-QSNVLTAQ778W8");
-                if (container) container.innerHTML = "";
                 paypal.HostedButtons({ hostedButtonId: "QSNVLTAQ778W8" }).render("#paypal-container-QSNVLTAQ778W8");
             } else {
-                setTimeout(initPayPal, 300);
+                setTimeout(initPayPal, 500);
             }
         }
         window.addEventListener('load', initPayPal);
