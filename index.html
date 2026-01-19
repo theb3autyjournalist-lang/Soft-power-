@@ -12,10 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
     <style>
         :root { --gold: #D4AF37; }
-        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #f5f5f5; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: #000000; color: #f5f5f5; scroll-behavior: smooth; }
         .serif { font-family: 'Bodoni Moda', serif; }
-        .gold-text { color: var(--gold); background: linear-gradient(to bottom, #f9e29b, #D4AF37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gold-text { color: var(--gold); }
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
     </style>
 </head>
 <body class="antialiased">
@@ -26,11 +26,11 @@
         <a href="#ledger" class="text-[10px] uppercase tracking-[0.4em] font-black text-white border-b border-[#D4AF37] pb-1">The Ledger</a>
     </nav>
 
-    <!-- Hero Identity -->
+    <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center">
         <div class="absolute inset-0 bg-black">
             <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black z-10"></div>
-            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2573&auto=format&fit=crop" class="w-full h-full object-cover opacity-20 grayscale" alt="Silent Authority">
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2573&auto=format&fit=crop" class="w-full h-full object-cover opacity-20 grayscale" alt="Authority">
         </div>
         <div class="relative z-20 text-center px-6">
             <span class="text-[10px] tracking-[1.5em] uppercase text-gray-500 font-bold mb-6 block italic leading-none">C. Ray3</span>
@@ -41,7 +41,7 @@
         </div>
     </section>
 
-    <!-- The Laws (Prompts) -->
+    <!-- The Laws -->
     <section class="py-40 bg-black flex justify-center border-t border-white/5">
         <div class="max-w-4xl w-full px-6">
             <div class="grid gap-24">
@@ -58,66 +58,53 @@
                         "If my boundaries were a <span class="gold-text">sanctuary</span>, who have I allowed to trample the grounds?"
                     </h2>
                 </div>
-
-                <div class="text-center">
-                    <p class="text-[10px] uppercase tracking-[0.5em] text-gray-600 mb-6 font-bold italic">Law III</p>
-                    <h2 class="serif text-4xl md:text-5xl text-white italic leading-relaxed">
-                        "Am I providing, or am I <span class="gold-text">performing</span>?"
-                    </h2>
-                </div>
             </div>
             
             <div class="mt-32 text-center">
-                <a href="https://www.amazon.com/Soft-Power-Journal-C-Ray3/dp/B0FMQZHBHR" target="_blank" class="inline-block border border-white/20 px-16 py-6 text-[10px] uppercase tracking-[0.4em] text-white hover:bg-white hover:text-black transition-all font-bold">Acquire Single Unit</a>
+                <a href="https://www.amazon.com/Soft-Power-Journal-C-Ray3/dp/B0FMQZHBHR" target="_blank" class="inline-block border border-white/20 px-16 py-6 text-[10px] uppercase tracking-[0.4em] text-white hover:bg-white hover:text-black transition-all font-bold italic">Acquire Single Unit ($14.00)</a>
             </div>
         </div>
     </section>
 
-    <!-- The Ledger (Wholesale) -->
+    <!-- The Ledger -->
     <section id="ledger" class="py-40 bg-[#030303] flex justify-center">
         <div class="max-w-4xl w-full px-6 text-center">
-            <span class="text-[#D4AF37] text-[10px] uppercase tracking-[1em] font-black mb-12 block italic">Corporate & Retreat Fulfillment</span>
-            <h2 class="serif text-6xl text-white mb-8 italic">Wholesale <br/><span class="font-bold not-italic">Ledger</span></h2>
+            <span class="text-[#D4AF37] text-[10px] uppercase tracking-[1em] font-black mb-12 block italic">Volume Acquisitions</span>
+            <h2 class="serif text-6xl text-white mb-8 italic leading-tight">The <span class="font-bold not-italic">Ledger</span></h2>
             
             <div class="glass p-8 md:p-16 rounded-[2.5rem] border border-white/10 max-w-lg mx-auto bg-white/5 mt-20">
-                <div class="flex justify-between items-end mb-12 border-b border-white/5 pb-8">
-                    <div class="text-left">
-                        <p class="text-[9px] uppercase tracking-widest text-gray-500 mb-2 font-black">Standard Bundle</p>
-                        <p class="text-white text-3xl serif italic leading-none">10 Units</p>
-                    </div>
-                    <div class="text-right">
-                        <p class="text-[9px] uppercase tracking-widest text-gray-500 mb-2 font-black">Settlement</p>
-                        <p class="text-[#D4AF37] text-3xl font-bold leading-none">$150.00</p>
+                <div class="mb-12 border-b border-white/5 pb-8">
+                    <p class="text-[10px] uppercase tracking-widest text-gray-500 mb-4 font-black">Settlement Portal</p>
+                    <p class="text-white text-xl serif italic leading-none">Boutique Ledger: 15 Units</p>
+                    <div class="mt-6 flex justify-center items-center gap-4">
+                        <span class="text-gray-600 text-sm line-through">$14.00</span>
+                        <span class="text-[#D4AF37] text-2xl font-bold italic">$10.00 / ea</span>
                     </div>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl shadow-2xl min-h-[150px] flex items-center justify-center">
                     <div id="paypal-container-QSNVLTAQ778W8" class="w-full"></div>
                 </div>
+                <p class="text-[9px] text-gray-600 uppercase tracking-widest mt-8 italic">Total Settlement: $150.00 USD</p>
             </div>
 
             <div class="mt-20">
-                <p class="text-gray-600 text-[10px] uppercase tracking-widest mb-4 italic leading-none">For 50+ Units or Curriculum Licensing</p>
+                <p class="text-gray-600 text-[10px] uppercase tracking-widest mb-4 italic">Retreat Bundles (50+) or Institutional Inquiry</p>
                 <a href="mailto:theb3autyjournalist@gmail.com" class="text-[12px] uppercase tracking-[0.5em] text-[#D4AF37] hover:text-white transition-colors font-bold underline">Formal Intake Inquiry</a>
             </div>
         </div>
     </section>
 
-    <!-- Signature Footer -->
+    <!-- Footer -->
     <footer class="py-40 text-center border-t border-white/5 bg-black">
-        <h2 class="serif text-xl tracking-[0.8em] gold-text font-bold mb-8 uppercase italic">Uneven Lines.co</h2>
-        
-        <!-- Social Identity -->
-        <div class="flex justify-center gap-12 mb-12">
-            <a href="https://www.facebook.com/TheB3autyJournalist" target="_blank" class="text-[9px] uppercase tracking-[0.4em] text-gray-600 hover:text-white transition-colors">FB</a>
-            <a href="https://www.instagram.com/theb3autyjournalist" target="_blank" class="text-[9px] uppercase tracking-[0.4em] text-gray-600 hover:text-white transition-colors">IG</a>
+        <h2 class="serif text-xl tracking-[0.8em] gold-text font-bold mb-8 uppercase italic leading-none">Uneven Lines.co</h2>
+        <div class="flex justify-center gap-12 mb-12 opacity-50">
+            <a href="https://www.facebook.com/TheB3autyJournalist" target="_blank" class="text-[9px] uppercase tracking-[0.4em] hover:opacity-100 transition-opacity">FB</a>
+            <a href="https://www.instagram.com/theb3autyjournalist" target="_blank" class="text-[9px] uppercase tracking-[0.4em] hover:opacity-100 transition-opacity">IG</a>
         </div>
-
         <p class="text-[12px] text-gray-400 tracking-[0.4em] uppercase font-light">C. Ray3</p>
-        <p class="text-[8px] text-gray-900 mt-24 tracking-widest uppercase italic leading-none">© Legacy Fulfillment Systems • All Rights Reserved</p>
     </footer>
 
-    <!-- PAYPAL RENDER -->
     <script>
         function initPayPal() {
             if (window.paypal && window.paypal.HostedButtons) {
@@ -130,7 +117,6 @@
         }
         window.addEventListener('load', initPayPal);
     </script>
-
 </body>
 </html>
 
