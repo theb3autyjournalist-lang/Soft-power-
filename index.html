@@ -40,7 +40,7 @@
 
         <div class="relative z-20 text-center px-6">
             <span class="text-[10px] tracking-[1.5em] uppercase text-gray-500 font-bold mb-6 block italic">C. Ray3 Publishing House</span>
-            <h1 class="text-7xl md:text-[11rem] serif italic font-light mb-0 text-white tracking-tighter">
+            <h1 class="text-7xl md:text-[11rem] serif italic font-light mb-0 text-white tracking-tighter leading-none">
                 Soft <span class="gold-text font-bold">Power</span>
             </h1>
             <p class="text-xl md:text-3xl font-light tracking-[0.6em] text-gray-400 uppercase mt-2 italic">The Journal</p>
@@ -52,10 +52,10 @@
         </div>
     </section>
 
-    <!-- Wholesale Section -->
+    <!-- Acquisition Section -->
     <section id="acquisition" class="py-40 flex justify-center border-t border-white/5 bg-[#030303]">
         <div class="max-w-4xl w-full px-6 text-center">
-            <span class="text-[#D4AF37] text-[10px] uppercase tracking-[1em] font-black mb-12 block">Secure Fulfillment</span>
+            <span class="text-[#D4AF37] text-[10px] uppercase tracking-[1em] font-black mb-12 block italic leading-none">Secure Fulfillment</span>
             
             <h2 class="serif text-6xl text-white mb-8 italic">Acquisition <br/><span class="font-bold not-italic">Settlement</span></h2>
             
@@ -64,7 +64,7 @@
                 Wholesale fulfillment units: 10.
             </p>
 
-            <!-- Final Professional Payment Card -->
+            <!-- Payment Card -->
             <div class="glass p-8 md:p-16 rounded-[2.5rem] border border-white/10 max-w-lg mx-auto bg-white/5">
                 <div class="flex justify-between items-end mb-12 border-b border-white/5 pb-8">
                     <div class="text-left">
@@ -77,32 +77,30 @@
                     </div>
                 </div>
 
-                <!-- PART 2: THE PROTECTED PAYPAL CONTAINER -->
+                <!-- PART 2: PAYPAL SMART BUTTON -->
                 <div class="bg-white p-6 rounded-2xl shadow-2xl">
                     <div id="paypal-container-QSNVLTAQ778W8"></div>
                     <script>
-                        // Robust render function to ensure script is fully loaded
-                        function initPayPal() {
+                        function loadButtons() {
                             if (window.paypal && window.paypal.HostedButtons) {
                                 paypal.HostedButtons({
                                     hostedButtonId: "QSNVLTAQ778W8",
                                 }).render("#paypal-container-QSNVLTAQ778W8");
                             } else {
-                                setTimeout(initPayPal, 500);
+                                setTimeout(loadButtons, 500);
                             }
                         }
-                        // Start trying to render
-                        initPayPal();
+                        loadButtons();
                     </script>
                 </div>
 
                 <p class="text-[8px] text-gray-600 uppercase tracking-widest mt-10 italic">
-                    Secure processing provided by PayPal Holdings Inc.
+                    Infrastructure powered by PayPal Holdings Inc.
                 </p>
             </div>
 
             <div class="mt-20">
-                <a href="mailto:unevenlines.co@gmail.com" class="text-[10px] uppercase tracking-[0.5em] text-gray-700 hover:text-[#D4AF37] transition-colors">Direct Invoice Inquiry</a>
+                <a href="mailto:unevenlines.co@gmail.com" class="text-[10px] uppercase tracking-[0.5em] text-gray-700 hover:text-[#D4AF37] transition-colors font-bold">Direct Invoice Inquiry</a>
             </div>
         </div>
     </section>
@@ -111,7 +109,7 @@
     <footer class="py-40 text-center border-t border-white/5 bg-black">
         <h2 class="serif text-5xl italic gold-text font-bold mb-4 uppercase">C. Ray3</h2>
         <p class="text-[10px] text-gray-700 tracking-[1em] uppercase font-black">Uneven Lines Publishing House</p>
-        <p class="text-[8px] text-gray-900 mt-20 tracking-widest uppercase">Legacy Fulfillment Systems • All Rights Reserved</p>
+        <p class="text-[8px] text-gray-900 mt-20 tracking-widest uppercase italic">Legacy Fulfillment Systems • All Rights Reserved</p>
     </footer>
 
 </body>
