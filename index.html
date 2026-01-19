@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uneven Lines.co | C. Ray3</title>
     
-    <!-- PAYPAL SDK (Part 1) -->
+    <!-- PART 1: PAYPAL SDK -->
     <script src="https://www.paypal.com/sdk/js?client-id=BAABEZF02fsOyaCBCpOKx20XJPUyrQhxM4nV1390RuGSVOPcvgJvH1raRtVEO31LQ7CW6_SM11SvUVecLg&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,17 +16,22 @@
         .serif { font-family: 'Bodoni Moda', serif; }
         .gold-text { color: var(--gold); background: linear-gradient(to bottom, #f9e29b, #D4AF37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        
+        #paypal-container-QSNVLTAQ778W8 { 
+            width: 100%; 
+            min-height: 150px;
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Brand Header -->
-    <nav class="fixed w-full z-50 px-6 py-8 flex justify-between items-center bg-gradient-to-b from-black to-transparent">
+    <!-- Brand Navigation -->
+    <nav class="fixed w-full z-50 px-8 py-10 flex justify-between items-center bg-gradient-to-b from-black to-transparent">
         <span class="serif text-xl tracking-[0.5em] gold-text font-bold uppercase">Uneven Lines.co</span>
         <a href="#acquisition" class="text-[10px] uppercase tracking-[0.4em] font-black text-white border-b border-[#D4AF37] pb-1">Acquire</a>
     </nav>
 
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center">
         <div class="absolute inset-0 bg-black">
             <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black z-10"></div>
@@ -34,20 +39,20 @@
         </div>
 
         <div class="relative z-20 text-center px-6">
-            <span class="text-[10px] tracking-[1.2em] text-gray-500 uppercase mb-4 block">C. Ray3 Collection</span>
+            <span class="text-[10px] tracking-[1.5em] uppercase text-gray-500 font-bold mb-6 block italic">C. Ray3 Publishing House</span>
             <h1 class="text-7xl md:text-[11rem] serif italic font-light mb-0 text-white tracking-tighter">
                 Soft <span class="gold-text font-bold">Power</span>
             </h1>
             <p class="text-xl md:text-3xl font-light tracking-[0.6em] text-gray-400 uppercase mt-2 italic">The Journal</p>
             
-            <div class="mt-24 flex flex-col md:flex-row gap-8 justify-center items-center">
-                <a href="https://www.amazon.com/Soft-Power-Journal-C-Ray3/dp/B0FMQZHBHR" target="_blank" class="w-64 border border-white/20 py-5 text-[10px] uppercase tracking-[0.4em] text-white hover:bg-white hover:text-black transition-all">Amazon Retail</a>
-                <a href="#acquisition" class="w-64 bg-white text-black py-5 text-[10px] uppercase tracking-[0.4em] font-bold transition-all">Wholesale Ledger</a>
+            <div class="mt-20 flex flex-col md:flex-row gap-8 justify-center items-center">
+                <a href="https://www.amazon.com/Soft-Power-Journal-C-Ray3/dp/B0FMQZHBHR" target="_blank" class="w-72 border border-white/20 py-5 text-[10px] uppercase tracking-[0.4em] text-white hover:bg-white hover:text-black transition-all font-bold">Amazon Retail</a>
+                <a href="#acquisition" class="w-72 bg-white text-black py-5 text-[10px] uppercase tracking-[0.4em] font-black hover:bg-[#D4AF37] transition-all">Wholesale Ledger</a>
             </div>
         </div>
     </section>
 
-    <!-- Acquisition Section -->
+    <!-- Wholesale Section -->
     <section id="acquisition" class="py-40 flex justify-center border-t border-white/5 bg-[#030303]">
         <div class="max-w-4xl w-full px-6 text-center">
             <span class="text-[#D4AF37] text-[10px] uppercase tracking-[1em] font-black mb-12 block">Secure Fulfillment</span>
@@ -59,39 +64,40 @@
                 Wholesale fulfillment units: 10.
             </p>
 
-            <!-- Payment Card -->
+            <!-- Final Professional Payment Card -->
             <div class="glass p-8 md:p-16 rounded-[2.5rem] border border-white/10 max-w-lg mx-auto bg-white/5">
                 <div class="flex justify-between items-end mb-12 border-b border-white/5 pb-8">
                     <div class="text-left">
-                        <p class="text-[9px] uppercase tracking-widest text-gray-500 mb-2 font-black">Quantity</p>
+                        <p class="text-[9px] uppercase tracking-widest text-gray-500 mb-2 font-black">Standard Unit</p>
                         <p class="text-white text-3xl serif italic leading-none">10 Copies</p>
                     </div>
                     <div class="text-right">
-                        <p class="text-[9px] uppercase tracking-widest text-gray-500 mb-2 font-black">Subtotal</p>
+                        <p class="text-[9px] uppercase tracking-widest text-gray-500 mb-2 font-black">Settlement</p>
                         <p class="text-[#D4AF37] text-3xl font-bold leading-none">$150.00</p>
                     </div>
                 </div>
 
-                <!-- PAYPAL BUTTON CONTAINER (Part 2) -->
+                <!-- PART 2: THE PROTECTED PAYPAL CONTAINER -->
                 <div class="bg-white p-6 rounded-2xl shadow-2xl">
                     <div id="paypal-container-QSNVLTAQ778W8"></div>
                     <script>
-                        // Function to render button only when script is ready
-                        function renderPayPal() {
+                        // Robust render function to ensure script is fully loaded
+                        function initPayPal() {
                             if (window.paypal && window.paypal.HostedButtons) {
                                 paypal.HostedButtons({
                                     hostedButtonId: "QSNVLTAQ778W8",
                                 }).render("#paypal-container-QSNVLTAQ778W8");
                             } else {
-                                setTimeout(renderPayPal, 500);
+                                setTimeout(initPayPal, 500);
                             }
                         }
-                        renderPayPal();
+                        // Start trying to render
+                        initPayPal();
                     </script>
                 </div>
 
                 <p class="text-[8px] text-gray-600 uppercase tracking-widest mt-10 italic">
-                    Infrastructure powered by PayPal Holdings Inc.
+                    Secure processing provided by PayPal Holdings Inc.
                 </p>
             </div>
 
@@ -102,9 +108,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-40 text-center border-t border-white/5">
+    <footer class="py-40 text-center border-t border-white/5 bg-black">
         <h2 class="serif text-5xl italic gold-text font-bold mb-4 uppercase">C. Ray3</h2>
         <p class="text-[10px] text-gray-700 tracking-[1em] uppercase font-black">Uneven Lines Publishing House</p>
+        <p class="text-[8px] text-gray-900 mt-20 tracking-widest uppercase">Legacy Fulfillment Systems • All Rights Reserved</p>
     </footer>
 
 </body>
