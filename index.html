@@ -28,41 +28,41 @@
         /* CINEMATIC PROMPT ANIMATION */
         .prompt-reveal {
             opacity: 0;
-            transform: translateY(60px) scale(0.98);
-            filter: blur(10px);
+            transform: translateY(80px);
+            filter: blur(5px);
             transition: all 1.8s cubic-bezier(0.16, 1, 0.3, 1);
             will-change: transform, opacity, filter;
         }
         
         .prompt-reveal.active {
             opacity: 1;
-            transform: translateY(0) scale(1);
+            transform: translateY(0);
             filter: blur(0px);
         }
 
-        /* Animated Gold Line */
+        /* Growing Gold Line Animation */
         .active-line {
             width: 1px;
             height: 0;
             background: linear-gradient(to bottom, transparent, var(--gold), transparent);
             margin: 0 auto 40px;
-            transition: height 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-            transition-delay: 0.3s;
+            transition: height 2s cubic-bezier(0.16, 1, 0.3, 1);
+            transition-delay: 0.4s;
         }
 
         .prompt-reveal.active .active-line {
-            height: 100px;
+            height: 120px;
         }
 
         /* THE LEDGER: Slate Fix (#111111) */
         .ledger-portal {
             background-color: #111111 !important;
             border: 1px solid #222;
-            padding: 60px 40px;
+            padding: 80px 40px;
             border-radius: 2px;
-            max-width: 480px;
+            max-width: 500px;
             margin: 0 auto;
-            box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+            box-shadow: 0 40px 100px rgba(0,0,0,0.9);
         }
 
         .ledger-portal h3, .ledger-portal p {
@@ -72,24 +72,24 @@
         .ledger-portal .price { 
             color: var(--gold) !important; 
             font-weight: 700; 
-            font-size: 2.25rem;
+            font-size: 2.5rem;
+            letter-spacing: -0.02em;
         }
 
-        nav { background: linear-gradient(to bottom, black, transparent); }
+        nav { background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent); }
         
-        /* Smooth Scroll */
         html { scroll-behavior: smooth; }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-10 py-12 flex justify-between items-center">
+    <nav class="fixed w-full z-50 px-10 py-12 flex justify-between items-center backdrop-blur-sm">
         <span class="serif text-xl tracking-[0.4em] uppercase font-bold gold italic">Uneven Lines Co.</span>
         <a href="#ledger" class="text-[9px] uppercase tracking-[0.4em] text-white/70 border-b border-[#D4AF37] pb-1 font-semibold hover:text-white transition-colors">The Ledger</a>
     </nav>
 
-    <!-- Hero Identity -->
+    <!-- Hero -->
     <section class="h-screen flex items-center justify-center relative">
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2573&auto=format&fit=crop" class="w-full h-full object-cover opacity-20 grayscale">
@@ -105,7 +105,7 @@
 
     <!-- Animated Prompts -->
     <section class="py-64 bg-black">
-        <div class="max-w-4xl mx-auto px-10 space-y-[60vh] text-center">
+        <div class="max-w-4xl mx-auto px-10 space-y-[65vh] text-center">
             
             <div class="prompt-reveal">
                 <div class="active-line"></div>
@@ -131,7 +131,7 @@
         </div>
     </section>
 
-    <!-- The Ledger Acquisition -->
+    <!-- The Ledger -->
     <section id="ledger" class="py-64 bg-zinc-950 border-t border-white/5">
         <div class="max-w-2xl mx-auto px-6 text-center">
             
@@ -157,7 +157,6 @@
                 <p class="text-[9px] mt-12 uppercase tracking-[0.4em] text-gray-600 italic">Secure Payment Processing</p>
             </div>
 
-            <!-- Amazon Link -->
             <div class="mt-32">
                 <a href="https://www.amazon.com/Soft-Power-Journal-C-Ray3/dp/B0FMQZHBHR" target="_blank" class="text-gray-600 hover:text-white transition-all text-[11px] uppercase tracking-[0.6em] italic border-b border-gray-900 pb-2">Individual Retail Portal ($14.00)</a>
             </div>
@@ -169,21 +168,18 @@
     </footer>
 
     <script>
-        // High-Precision Intersection Observer for active animations
+        // High-Precision Intersection Observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                } else {
-                    // Optional: remove class to allow re-animation when scrolling back up
-                    // entry.target.classList.remove('active'); 
                 }
             });
-        }, { threshold: 0.3 });
+        }, { threshold: 0.35 });
 
         document.querySelectorAll('.prompt-reveal').forEach(el => observer.observe(el));
 
-        // PayPal Loader
+        // PayPal Reliable Initialization
         function initPayPal() {
             if (window.paypal && window.paypal.HostedButtons) {
                 const container = document.getElementById("paypal-container-QSNVLTAQ778W8");
@@ -192,7 +188,7 @@
                     paypal.HostedButtons({ hostedButtonId: "QSNVLTAQ778W8" }).render("#paypal-container-QSNVLTAQ778W8");
                 }
             } else {
-                setTimeout(initPayPal, 800);
+                setTimeout(initPayPal, 1000);
             }
         }
         window.addEventListener('load', initPayPal);
